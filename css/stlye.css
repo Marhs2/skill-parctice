@@ -1,0 +1,140 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: #333;
+}
+
+img{
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.flex{display: flex;}
+#dn{display: none;}
+.red{color: red;}
+.blue{color: blue;}
+.container{width: 1320px;}
+header{height: 80px;width: 100%;border: 1px solid black; justify-content:space-around; align-items: center;}
+.header-logo{border: 1px solid black; width: 80px; height: 100%; border-radius: 50%; text-align: center; line-height: 80px;}
+.menu{align-items: center;}
+nav a{
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+    display: block;
+    width: 140px;
+    height: 30px;
+}
+
+.user a{
+    display: block;
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+    background-color: skyblue;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px ;
+}
+
+.slide{
+    margin: 5% auto;
+    width: 1320px;
+    height: 600px;
+}
+
+.secen{
+    width: 1320px;
+    height: 600px;
+    display: flex;
+    
+}
+
+.secen img{
+    width: 150px;
+    height: 150px;
+}
+
+.secen img:first-child{
+    height: 600px;
+    width: 70%;
+}
+
+.secen > div{
+    display: flex;
+}
+.secen div div{
+    display: flex;
+    flex-direction: column;
+}
+
+.secen div div img:nth-child(1),.secen div div img:nth-child(2){
+    width: 400px;
+    height: 300px;
+}
+
+
+.information{
+    height: 800px;
+}
+
+.information h1{
+    border-bottom: 5px solid black;
+    margin: 50px auto;
+    padding: 10px;
+    width: 300px;
+    text-align: center;
+    margin-top: 14%;
+    }
+
+.about{
+    border: 1px solid black;
+    width: 1000px;
+    height: 500px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.about img{
+    width: 650px;
+    height: 500px;
+}
+
+.aboutText{
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 400px;
+    text-align: center
+}
+
+.about > div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.about a{
+    border-radius: 10px;
+    width: 250px;
+    border: 0;
+    margin: 0 auto;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+
+table{ border-collapse : collapse; }  
+
+
+th,td{
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    
+  }
