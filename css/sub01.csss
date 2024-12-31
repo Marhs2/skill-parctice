@@ -1,0 +1,106 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: #333;
+}
+
+
+.size500 {
+    width: 500px;
+}
+
+.size {
+    width: 1300px;
+}
+
+.dfjb {
+    display: flex;
+    justify-content: space-between;
+}
+
+.today {
+    display: block;
+    background-color: burlywood;
+    color: white;
+    border-radius: 10px;
+}
+
+.matchDay {
+    display: block;
+    background-color: skyblue;
+    color: white;
+    border-radius: 10px;
+}
+
+img {
+    object-fit: cover;
+    vertical-align: middle;
+}
+
+.flex {
+    display: flex;
+}
+
+#dn {
+    display: none;
+}
+
+.red {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.container {
+    width: 1320px;
+}
+
+header {
+    height: 80px;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+}
+
+.header-logo {
+    border: 1px solid black;
+    width: 80px;
+    height: 100%;
+    border-radius: 50%;
+    text-align: center;
+    display: block;
+    line-height: 80px;
+}
+
+.menu {
+    align-item1: center;
+}
+
+nav a {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 5px;
+    display: block;
+    width: 140px;
+    height: 30px;
+}
+
+.user a {
+    display: block;
+    margin: 5px;
+    width: 100px;
+    height: 50px;
+    background-color: skyblue;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 10px;
+}
