@@ -508,65 +508,33 @@ td {
 
 
 .leauge:has(#night:checked)~.rank .weekend-rank,
-.leauge:has(#night:checked)~.rank .dawn-rank {
-    display: none;
-}
-
+.leauge:has(#night:checked)~.rank .dawn-rank,
+.leauge:has(#dawn:checked)~.rank .weekend-rank,
+.leauge:has(#dawn:checked)~.rank .night-rank,
 .leauge:has(#weekend:checked)~.rank .night-rank,
 .leauge:has(#weekend:checked)~.rank .dawn-rank {
     display: none;
 }
 
-.leauge:has(#dawn:checked)~.rank .weekend-rank,
-.leauge:has(#dawn:checked)~.rank .night-rank {
-    display: none;
-}
 
-
-
-.leauge:has(#night[type='radio']:checked)~div .position:nth-child(1) {
-    display: flex;
-}
-
-div:has(.position:nth-child(1) > #night-shout:checked)~.rank .night-rank .shout-rank {
-    display: table;
-}
-
-div:has(.position:nth-child(1) > #night-bat:checked)~.rank .night-rank .bat-rank {
-    display: table;
-}
-
-.leauge:has(#weekend[type='radio']:checked)~div .position:nth-child(2) {
-    display: flex;
-}
-
-div:has(.position:nth-child(2) > #weekend-shout:checked)~.rank .weekend-rank .shout-rank {
-    display: table;
-}
-
-div:has(.position:nth-child(2) > #weekend-bat:checked)~.rank .weekend-rank .bat-rank {
-    display: table;
-}
-
+.leauge:has(#night[type='radio']:checked)~div .position:nth-child(1),
+.leauge:has(#weekend[type='radio']:checked)~div .position:nth-child(2),
 .leauge:has(#dawn[type='radio']:checked)~div .position:nth-child(3) {
     display: flex;
 }
 
+div:has(.position:nth-child(2) > #weekend-shout:checked)~.rank .weekend-rank .shout-rank,
+div:has(.position:nth-child(2) > #weekend-bat:checked)~.rank .weekend-rank .bat-rank,
+div:has(.position:nth-child(1) > #night-bat:checked)~.rank .night-rank .bat-rank,
+div:has(.position:nth-child(1) > #night-shout:checked)~.rank .night-rank .shout-rank,
+div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank,
 div:has(.position:nth-child(3) > #dawn-shout:checked)~.rank .dawn-rank .shout-rank {
     display: table;
 }
 
-div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
-    display: table;
-}
 
 
-
-
-.rank>div>table {
-    display: none;
-}
-
+.rank>div>table,
 .position {
     display: none;
 }
