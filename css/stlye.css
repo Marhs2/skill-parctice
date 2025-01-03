@@ -13,7 +13,7 @@
 }
 
 .size {
-    width: 1300px;
+    width: 1320px;
 }
 
 .dfjb {
@@ -56,13 +56,21 @@ img {
     color: blue;
 }
 
-.container {
+
+.cupo {
+    cursor: pointer;
+
+}
+
+
+.contianer {
+    margin: 5% auto;
     width: 1320px;
 }
 
+/* -------------------------------------- */
 header {
-    height: 80px;
-    width: 100%;
+    height: 100px;
     justify-content: space-around;
     align-items: center;
     position: fixed;
@@ -71,14 +79,9 @@ header {
     background-color: white;
 }
 
-.header-logo {
-    border: 1px solid black;
-    width: 80px;
-    height: 100%;
-    border-radius: 50%;
-    text-align: center;
-    display: block;
-    line-height: 80px;
+.header-logo>img {
+    height: 100px;
+
 }
 
 .menu {
@@ -90,9 +93,25 @@ nav a {
     font-weight: bold;
     margin: 5px;
     display: block;
-    width: 140px;
     height: 30px;
+    margin: 0 30px;
 }
+
+
+nav a::after {
+    transition: .3s;
+    content: "";
+    width: 0;
+    display: block;
+    background-color: #0A1829;
+}
+
+nav a:hover::after {
+    transition: .3s;
+    width: 100%;
+    height: 2px
+}
+
 
 .user a {
     display: block;
@@ -104,6 +123,9 @@ nav a {
     line-height: 50px;
     border-radius: 10px;
 }
+
+/* ---------------------헤더----------------- */
+
 
 .slide {
     margin: 5% auto;
@@ -124,50 +146,46 @@ nav a {
 
 
 @keyframes slide {
-    0%, 24% { transform: translateX(0); } /* 0% ~ 24.999% 동안 첫 번째 이미지 표시 (약 2초) */
-    25%, 49% { transform: translateX(-1300px); } /* 25% ~ 49.999% 동안 두 번째 이미지 표시 (약 2초) */
-    50%, 74% { transform: translateX(-2600px); } /* 50% ~ 74.999% 동안 세 번째 이미지 표시 (약 2초) */
-    75%, 99% { transform: translateX(-3900px); } /* 75% ~ 99.999% 동안 네 번째 이미지 표시 (약 2초) */
-    100% { transform: translateX(-5200px); } /* 즉시 첫 번째 이미지로 이동 */
-    
+
+    0%,
+    24% {
+        transform: translateX(0);
+    }
+
+    25%,
+    49% {
+        transform: translateX(-1300px);
+    }
+
+    50%,
+    74% {
+        transform: translateX(-2600px);
+    }
+
+    75%,
+    99% {
+        transform: translateX(-3900px);
+    }
+
+    100% {
+        transform: translateX(-5200px);
+    }
 }
 
 .secen {
     width: 1300px;
     height: 600px;
-    display: flex;
-
 }
 
-.secen img {
-    width: 150px;
-    height: 150px;
+.secen>img {
+    width: 1320px;
+    height: 700px;
+    object-fit: contain;
 }
 
-.secen img:first-child {
-    height: 600px;
-    width: 900px;
-}
-
-.secen>div {
-    display: flex;
-}
-
-.secen div div {
-    display: flex;
-    flex-direction: column;
-}
-
-.secen div div img:nth-child(1),
-.secen div div img:nth-child(2) {
-    width: 400px;
-    height: 300px;
-}
+/* -----------------슬라이드--------------------- */
 
 
-.information {
-    height: 800px;
-}
 
 .title {
     border-bottom: 5px solid black;
@@ -184,6 +202,10 @@ nav a {
     height: 500px;
     margin: 0 auto;
     display: flex;
+}
+
+.information {
+    height: 800px;
 }
 
 .about img {
@@ -216,6 +238,10 @@ nav a {
     color: white;
     padding: 10px;
 }
+
+
+/* --------------인포메이션------------------------ */
+
 
 table {
     border-collapse: collapse;
@@ -266,6 +292,7 @@ td {
     visibility: hidden;
     transition: .3s;
 }
+
 
 #Popup:checked~div {
     opacity: 1;
@@ -323,7 +350,7 @@ td {
 
 .TDMT {
     display: flex;
-    align-item1: center;
+    align-items: center;
     justify-content: center;
 }
 
@@ -340,30 +367,38 @@ td {
     transition: .3s;
 }
 
-.team:hover{
+.team:hover {
     transform: scale(1.03)
 }
 
 .team h3 {
+    text-align: center;
     font-size: 20px;
+}
+
+.teamLogo {
+    margin: 0 auto;
+    width: 150px;
 }
 
 .teamLogo a {
     display: block;
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     text-align: center;
-    margin: 0 auto;
 }
 
-.teamLogo {
-    margin: 20px;
+
+.score {
+    font-size: 25px;
+    font-weight: bold;
 }
+
+/* -------------게임 스케쥴------------------------ */
 
 
 .active {
-    background-color: skyblue;
+    background-color: #87ceeb;
     color: white;
 }
 
@@ -456,6 +491,7 @@ td {
     height: 50px;
 }
 
+
 .aboutRank [type="radio"]~ul>li {
     height: 0;
 }
@@ -465,7 +501,7 @@ td {
     display: none;
 }
 
-[type="radio"]:checked+label {
+.ranking [type="radio"]:checked+label {
     background-color: skyblue;
     color: white;
 }
@@ -525,6 +561,8 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
 }
 
 
+
+
 .rank>div>table {
     display: none;
 }
@@ -533,6 +571,8 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
     display: none;
 }
 
+
+/* --------------랭킹------------ */
 
 
 .Btns-contnets>div {
@@ -554,7 +594,7 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
 }
 
 .imgs {
-    margin: 50px 190px;
+    margin: 50px auto;
     overflow: hidden;
     width: 1300px;
 }
@@ -606,57 +646,130 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
 }
 
 
-
-
-.Btns-contnets:has(#slideoRight1:checked)+.imgs>div {
-    transform: translateX(260px);
+.imgs>div>div {
+    transition: .3s;
 }
 
-
-.Btns-contnets:has(#slideoRight2:checked)+.imgs>div {
-    transform: translateX(0);
-}
-
-.Btns-contnets:has(#slideoRight3:checked)+.imgs>div {
+#btn-slide-right-01:checked~.imgs>div>div {
     transform: translateX(-260px);
 }
 
-.Btns-contnets:has(#slideoRight4:checked)+.imgs>div {
+#btn-slide-right-02:checked~.imgs>div>div {
+    transform: translateX(-520px);
+}
+
+#btn-slide-right-03:checked~.imgs>div>div {
+    transform: translateX(-780px);
+}
+
+#btn-slide-right-04:checked~.imgs>div>div {
+    transform: translateX(-780px);
+}
+
+#btn-slide-left-01:checked~.imgs>div>div {
     transform: translateX(-260px);
 }
 
-.Btns-contnets:has(#slideoLeft1:checked)+.imgs>div {
-    transform: translateX(260px);
+#btn-slide-left-02:checked~.imgs>div>div {
+    transform: translateX(-520px);
 }
 
-.Btns-contnets:has(#slideoLeft2:checked)+.imgs>div {
-    transform: translateX(0);
-}
-
-.Btns-contnets:has(#slideoRight1:checked)>div>div {
+#btn-slide-right-01:checked~.Btns-contnets>div>div {
     transform: translateX(-1000px);
 }
 
-.Btns-contnets:has(#slideoRight2:checked)>div>div {
+#btn-slide-right-01:checked~.Btns-contnets>div>div label {
+    animation: unclick 1s;
+}
+
+#btn-slide-right-02:checked~.Btns-contnets>div>div label {
+    animation: unclick2 1s;
+}
+
+#btn-slide-right-03:checked~.Btns-contnets>div>div label {
+    animation: unclick3 1s;
+}
+
+#btn-slide-right-04:checked~.Btns-contnets>div>div label {
+    animation: unclick4 1s;
+}
+
+#btn-slide-left-01:checked~.Btns-contnets>div>div label {
+    animation: unclick1 1s;
+}
+
+#btn-slide-left-02:checked~.Btns-contnets>div>div label {
+    animation: unclick2 1s;
+}
+
+#btn-slide-right-02:checked~.Btns-contnets>div>div {
     transform: translateX(-2000px);
 }
 
-.Btns-contnets:has(#slideoRight3:checked)>div>div {
-
+#btn-slide-right-03:checked~.Btns-contnets>div>div {
     transform: translateX(-3000px);
 }
 
-.Btns-contnets:has(#slideoRight4:checked)>div>div {
+#btn-slide-right-04:checked~.Btns-contnets>div>div {
     transform: translateX(-3000px);
 }
 
-.Btns-contnets:has(#slideoLeft1:checked)>div>div {
+#btn-slide-left-01:checked~.Btns-contnets>div>div {
     transform: translateX(-1000px);
 }
 
-.Btns-contnets:has(#slideoLeft2:checked)>div>div {
+#btn-slide-left-02:checked~.Btns-contnets>div>div {
     transform: translateX(-2000px);
 }
+
+@keyframes unclick {
+    0% {
+        pointer-events: none;
+        opacity: 0.1;
+    }
+
+    100% {
+        pointer-events: none;
+        opacity: 1;
+    }
+}
+
+@keyframes unclick2 {
+    0% {
+        pointer-events: none;
+        opacity: 0.1;
+    }
+
+    100% {
+        pointer-events: none;
+        opacity: 1;
+    }
+}
+
+@keyframes unclick3 {
+    0% {
+        pointer-events: none;
+        opacity: 0.1;
+    }
+
+    100% {
+        pointer-events: none;
+        opacity: 1;
+    }
+}
+
+@keyframes unclick4 {
+    0% {
+        pointer-events: none;
+        opacity: 0.1;
+    }
+
+    100% {
+        pointer-events: none;
+        opacity: 1;
+    }
+}
+
 
 .showNumber {
     visibility: hidden;
@@ -710,21 +823,24 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
     opacity: 1;
 }
 
+/* ------------갤러리------------- */
 
-.goods > div{
+
+
+.goods>div {
     display: flex;
     justify-content: space-evenly;
     margin: 50px auto;
 }
 
 
-.goodsContenet{
+.goodsContenet {
     display: flex;
 }
 
-.goodsContenet > div > div{
+.goodsContenet>div>div {
     border: 1px solid black;
-    
+
 }
 
 .item1 {
@@ -735,7 +851,7 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
 }
 
 .item1>div {
-    width: 300px ;
+    width: 300px;
     height: 300px;
     display: grid;
     grid-template-columns: calc(300px /3);
@@ -743,12 +859,12 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
     background: url(../images/24.jpg);
     background-size: 360px 360px;
     background-position: center;
-    transition: .5s ;
+    transition: .5s;
 }
 
 
 .item2>div {
-    width: 300px ;
+    width: 300px;
     height: 300px;
     background: url(../images/28.jpg);
     background-size: 360px 360px;
@@ -757,7 +873,7 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
 
 
 .item3>div {
-    width: 300px ;
+    width: 300px;
     height: 300px;
     background: url(../images/29.jpg);
     background-size: 360px 360px;
@@ -766,7 +882,7 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
 
 
 .item4>div {
-    width: 300px ;
+    width: 300px;
     height: 300px;
     background: url(../images/34.jpg);
     background-size: 360px 360px;
@@ -835,7 +951,7 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
 
 .move4 {
     background-size: 360px 360px;
-    cursor: w-resize; 
+    cursor: w-resize;
 }
 
 .move5 {
@@ -851,38 +967,41 @@ div:has(.position:nth-child(3) > #dawn-bat:checked)~.rank .dawn-rank .bat-rank {
 
 .move7 {
     background-size: 360px 360px;
-    cursor:sw-resize;
+    cursor: sw-resize;
 }
 
 .move8 {
     background-size: 360px 360px;
-    cursor:s-resize;
+    cursor: s-resize;
 }
 
 .move9 {
     background-size: 360px 360px;
-    cursor:se-resize;
+    cursor: se-resize;
 }
 
-footer{
+
+
+/* -------굿즈---------- */
+
+footer {
     height: 200px;
     display: flex;
     justify-content: start;
     align-items: center;
 }
 
-footer a{
+footer a {
     margin: 0 100px;
     width: 150px;
     height: 150px;
-    border: 1px solid black;
     display: block;
-    border-radius: 50%;
     text-align: center;
     line-height: 150px;
 }
 
-.copyRight{
+.copyRight {
     line-height: 30px;
 }
 
+/* -----푸터----------- */
